@@ -630,7 +630,7 @@ namespace QuantConnect.Algorithm
         /// <param name="resolution">The resolution</param>
         /// <param name="selector">Selects a value from the BaseData to send into the indicator, if null defaults to the Value property of BaseData (x => x.Value)</param>
         /// <returns>The moving average convergence divergence between the fast and slow averages</returns>
-        [Obsolete("MACD Default MovingAverageType will change 2018-03-01 from MovingAverageType.Simple to MovingAverageType.Exponential")] 
+        [Obsolete("MACD Default MovingAverageType will change 2018-03-01 from MovingAverageType.Simple to MovingAverageType.Exponential")]
         public MovingAverageConvergenceDivergence MACD(Symbol symbol, int fastPeriod, int slowPeriod, int signalPeriod, MovingAverageType type = MovingAverageType.Simple, Resolution? resolution = null, Func<IBaseData, decimal> selector = null)
         {
             var name = CreateIndicatorName(symbol, string.Format("MACD({0},{1})", fastPeriod, slowPeriod), resolution);
@@ -1231,7 +1231,7 @@ namespace QuantConnect.Algorithm
         }
 
         /// <summary>
-        /// Creates a WilderMovingAverage indicator for the symbol. 
+        /// Creates a WilderMovingAverage indicator for the symbol.
         /// The indicator will be automatically updated on the given resolution.
         /// </summary>
         /// <param name="symbol">The symbol whose WMA we want</param>
